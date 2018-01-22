@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>AngularJs</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script type="text/javascript" src="js/angular.js">
+    </script>
+    <script type="text/javascript" src="js/myScript.js">
+    </script>
+
+</head>
+
+<body ng-app="myModule" class="orta">
+<marquee> Kayan yazi </marquee>
+<select> liste
+<option>birinci secenek</option>
+<option>ikinci secenek</option>
+<option>ucuncu secenek</option>
+</select>
+    Angular2	
+    <div ng-controller="myController">
+        <div class="divTablo">
+            <div class="divSatir">
+                <div class="divHucre">
+                        Adı:
+                </div>
+                <div class="divHucre">
+                        <input type="text" ng-model="txtAdi">           
+                </div>
+            </div>
+            <div class="divSatir">
+                    <div class="divHucre">
+                            Soyadı:
+                    </div>
+                    <div class="divHucre">
+                            <input type="text" ng-model="txtSoyadi">          
+                    </div>
+            </div>
+            <div class="divSatir">
+                    <div class="divHucre">
+                            Tel:
+                    </div>
+                    <div class="divHucre">
+                            <input type="text" ng-model="txtTel">
+                    </div>
+            </div>
+            <div class="divSatir">
+                    <div class="divHucre">
+                            &nbsp;
+                    </div>
+                    <div class="divHucre">
+                            &nbsp;
+                    </div>
+            </div>
+            
+            
+            
+        </div>
+        <input type="button" value="Kaydet" class="btn btn-primary"
+        ng-model="btnGonder" ng-click=gonder()>
+        </br>
+		<button class="btn btn-primary" type="button" disabled="true">
+			Kayit Sayisi <span class="badge">{{degisken}}</span>
+		</button>
+        <div class="divSatir">
+                    <div class="divHucre">
+                            Arama:
+                    </div>
+                    <div class="divHucre">
+                            <input type="text" ng-model="arama"/>
+                    </div>
+            </div>
+        <table border="1" class="orta">
+            <thead>
+                <tr>
+                    <td>Adı Soyadı</td>
+                    <td></td>
+                    <td>Tel</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="dizi in diziler | filter:arama | orderBy:'-adi'">
+                    <td>{{dizi.adi + " "}}{{dizi.soyadi | uppercase}}</td>
+                    <td></td>
+                    <td>{{dizi.tel}}</td>
+                </tr>
+                <tr>
+                        <td>{{txtAdi+" "}}{{txtSoyadi|uppercase}}</td>
+                        <td></td>
+                        <td>{{txtTel}}</td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

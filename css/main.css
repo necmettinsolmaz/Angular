@@ -1,0 +1,33 @@
+
+
+.orta{
+    margin: 10px;
+    background-color:antiquewhite;
+}
+.girisAlani{
+    padding: 2px;
+    float: right;
+}
+table{width:auto; }
+ 
+ 
+ 
+.divTablo{ 
+	display:inline-table; 
+	width:100%;
+	}
+ 
+.divSatir{ 
+	display:table-row; 
+	width:100%; 
+	min-height:30px; 
+	margin:4px 2px;
+	align:left;
+	}
+ 
+.divHucre{ 
+	display:table-cell; 
+	vertical-align:middle
+	align:left;
+	//float:left;
+	}
