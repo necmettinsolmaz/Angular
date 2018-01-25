@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>AngularJs</title>
+    <meta charset="UTF-8" />
+    <link href="css/main.css" rel="stylesheet" type="text/css"/>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+   
+    <script type="text/javascript" src="js/angular.js">
+    </script>
+    <script type="text/javascript" src="js/myScript.js">
+    </script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</head>
+
+<body ng-app="myModule">
+    <input type="text" ng-model="giris">
+    merhaba {{giris}}
+    <div ng-controller="myController">
+    
+    <form ng-submit="diziyeEkle()">
+    
+        <input type="text" ng-model="isim" placeholder="isim">
+        <input type="text" ng-model="tel" placeholder="tel">
+        <button>Ekle</button>
+    </form>
+    </div>
+    <div ng-controller="myController">
+       
+        <ul>
+            <li ng-repeat="dizi in diziler">
+                {{dizi.adi}} {{dizi.soyadi}}-{{dizi.tel}}
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
