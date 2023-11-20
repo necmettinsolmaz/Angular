@@ -4,10 +4,10 @@ var myApp=angular
 .controller("myController",function($scope){
     $scope.degisken=0;
     $scope.diziler=[{adi:"Osman", soyadi:"solmaz", tel:"555 123 45 66"},
-            {adi:"Murathan", soyadi:"solmaz", tel:"544 224 80 83"},  
+            {adi:"Murathan", soyadi:"solmaz", tel:"500 112 80 80"},  
             {adi:"Fatma", soyadi:"solmaz", tel:"123 456 78 90"},
-            {adi: "Kübra", soyadi:"solmaz", tel:"505 455 44 05"},
-            {adi:"Necmettin", soyadi:"solmaz", tel:"554 328 15 14"}];
+            {adi: "Kübra", soyadi:"solmaz", tel:"500 118 80 80"},
+            {adi:"Necmettin", soyadi:"solmaz", tel:"500 118 80 80"}];
 
         
     //$scope.diziler=diziler;
